@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from './ui/button';
 import Checkbox from './ui/checkbox';
 import DeleteIcon from '@/assets/icons/DeleteIcon';
+import { motion } from 'framer-motion';
 
 interface TodoItemProps {
     todo: { id: number; text: string; completed: boolean };
@@ -11,7 +12,13 @@ interface TodoItemProps {
 
 const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onDelete }) => {
     return (
-        <div className='w-full flex justify-between border-[0.1px] rounded-lg py-1'>
+        <motion.div
+            className='w-full flex justify-between border-[0.1px] rounded-lg py-1'
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.3 }}
+        >
             <div className='flex items-center w-full px-2'>
                 <Checkbox
                     checked={todo.completed}
@@ -24,7 +31,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onDelete }) => {
                     <DeleteIcon width={24} height={24} color='#fff' thickness={1} />
                 </Button>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

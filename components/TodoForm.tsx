@@ -23,7 +23,7 @@ const TodoForm: React.FC<TodoFormProps> = ({ onAdd }) => {
             <Input type="text"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
-                placeholder="Add a new todo"
+                placeholder="Add new task"
                 className='bg-slate-900 text-white font-garet-book'
             />
             <Button
