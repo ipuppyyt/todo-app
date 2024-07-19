@@ -17,8 +17,8 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onDelete }) => {
                     checked={todo.completed}
                     onChange={() => onToggle(todo.id)}
                 />
-                <span className='flex-1 font-garet-book text-sm my-[1px] mx-3 overflow-hidden' style={{ whiteSpace: 'normal', wordWrap: 'break-word', overflowWrap: 'break-word' }}>
-                    {todo.text}
+                <span className={`flex-1 font-garet-book text-sm my-[1px] mx-3 overflow-hidden ${todo.completed && 'text-slate-400'}`} style={{ whiteSpace: 'normal', wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+                    {todo.text} {todo.completed && <span className='text-slate-400'>(Done)</span>}
                 </span>
                 <Button className='px-0 bg-transparent hover:bg-transparent flex items-center' onClick={() => onDelete(todo.id)}>
                     <DeleteIcon width={24} height={24} color='#fff' thickness={1} />
