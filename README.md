@@ -2,6 +2,10 @@
 
 A simple and efficient Todo App built with Next.js, Tailwind CSS, Shadcn UI, and Headless UI.
 
+## Demo
+
+[Click here for live preview](https://ipuppyyt.github.io/task-tracker)
+
 ## Features
 
 - Add, edit, and delete tasks
@@ -19,7 +23,9 @@ A simple and efficient Todo App built with Next.js, Tailwind CSS, Shadcn UI, and
 
 ## Preview
 
+##### Preview 1
 ![Preview 1](.github/preview1.png)
+##### Preview 2
 ![Preview 2](.github/preview2.png)
 
 ## Getting Started
